@@ -14,6 +14,10 @@ LABEL Description="This image is used to ease TYPO3 Documentation rendering with
         pip install t3tablerows && \
         pip install t3targets
 
+    RUN cd /usr/local/lib/python2.7/site-packages/pygments/lexers/ && \
+        wget https://raw.githubusercontent.com/Tuurlijk/Pygments-TypoScript-Lexer/master/typoscript.py && \
+        python _mapping.py
+
     WORKDIR /home/t3-sphinx/_make
 
     ENTRYPOINT ["make"]
