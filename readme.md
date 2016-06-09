@@ -9,11 +9,11 @@ docker.
 ## Install
 
 1. Clone Repository.
-2. Run `docker build -t t3-sphinx .`, from within the repository.
+2. Run `docker build -t danielsiepmann/t3-sphinx .`, from within the repository.
 
 ## Run
 
-Run `docker run -it --rm -v "$PWD":/home/t3-sphinx t3-sphinx html` from within the `Documentation` folder.
+Run `docker run -it --rm -v "$PWD":/home/t3-sphinx danielsiepmann/t3-sphinx html` from within the `Documentation` folder.
 
 Where the last argument is the output format as provided by `_make/Makefile`.
 
